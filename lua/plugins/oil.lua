@@ -8,7 +8,10 @@ return {
     columns = {
       "icon",
       "size",
-      "permissions",
+      -- TODO:
+      -- Add a keybind to toggle permissions view?
+      -- There's a recipe for this in the docs
+      -- "permissions",
     },
     keymaps = {
       -- ["<BS>"] = "actions.parent",
