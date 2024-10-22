@@ -53,13 +53,19 @@ return {
         end,
         opts = { buffer = true },
       },
+
       -- Smart action depending on context, either follow link or toggle checkbox.
-      -- ["<cr>"] = {
-      --   action = function()
-      --     return require("obsidian").util.smart_action()
-      --   end,
-      --   opts = { buffer = true, expr = true },
-      -- },
+      ["<cr>"] = {
+        action = function()
+          local o = require("obsidian").util
+          if o.cursor_on_markdown_link(nil, nil, true) then
+            return "<cmd>ObsidianFollowLink<CR>"
+          end
+          --     return require("obsidian").util.smart_action()
+          --   end,
+        end,
+        opts = { buffer = true, expr = true },
+      },
     },
     new_notes_location = "notes_subdir",
     -- Optional, customize how note IDs are generated given an optional title.

@@ -20,6 +20,11 @@ map({ "n" }, "<S-Left>", "H", { desc = "Left Buffer", remap = true })
 map({ "n" }, "<S-Right>", "L", { desc = "Right Buffer", remap = true })
 map({ "n" }, "<S-Down>", "5j", { remap = true })
 map({ "n" }, "<S-Up>", "5k", { remap = true })
+map({ "i" }, "<M-e>", "<Esc>", { desc = "Escape insert mode", remap = true })
+
+-- Remap spelling suggestions
+-- map({ "n" }, "z-", "z=", { desc = "Spelling Suggestions", remap = true })
+
 -- Oil.nvim open parent directory
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil" })
 
