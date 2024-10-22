@@ -20,7 +20,6 @@ map({ "n" }, "<S-Left>", "H", { desc = "Left Buffer", remap = true })
 map({ "n" }, "<S-Right>", "L", { desc = "Right Buffer", remap = true })
 map({ "n" }, "<S-Down>", "5j", { remap = true })
 map({ "n" }, "<S-Up>", "5k", { remap = true })
-
 -- Oil.nvim open parent directory
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil" })
 
@@ -29,23 +28,3 @@ map("n", "<localleader>pn", "<Plug>(neorg.presenter.next-page)", {})
 map("n", "<localleader>pp", "<Plug>(neorg.presenter.previous-page)", {})
 map("n", "<leader>uz", "<CMD>ZenMode<CR>", { desc = "Toggle Zen Mode" })
 map("n", "<leader>ux", "<CMD>Twilight<CR>", { desc = "Toggle Twilight" })
--- LazyVim.toggle.map("<leader>uz", {
---   name = "Zen Mode",
---   get = function()
---     require("zen-mode").close
---     -- return not vim.g.minianimate_disable
---   end,
---   set = function(state)
---
---     require("zen-mode").toggle()
---   end,
--- })
--- LazyVim.toggle.map("<leader>uz", {
---   name = "Zen Mode",
---   get = function()
---     return not vim.g.minianimate_disable
---   end,
---   set = function(state)
---     vim.g.minianimate_disable = not state
---   end,
--- })
