@@ -14,6 +14,18 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
       "__<Left>",
       { desc = "Markdown: Italics", noremap = true, silent = true }
     )
+    vim.api.nvim_buf_set_keymap(0, "i", "<M-d>", "- [ ] ", { desc = "Markdown: Task", noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, "i", "<M-a>", "# ", { desc = "Markdown: Heading", noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, "i", "<M-r>", "## ", { desc = "Markdown: Heading", noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, "i", "<M-s>", "### ", { desc = "Markdown: Heading", noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, "i", "<M-t>", "#### ", { desc = "Markdown: Heading", noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(
+      0,
+      "i",
+      "<M-g>",
+      "##### ",
+      { desc = "Markdown: Heading", noremap = true, silent = true }
+    )
     vim.api.nvim_buf_set_keymap(
       0,
       "i",
